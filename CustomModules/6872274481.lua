@@ -14381,6 +14381,14 @@ runFunction(function()
 		skyobj.SkyboxRt = 'rbxassetid://1045964655'
 		skyobj.SkyboxUp = 'rbxassetid://1045962969'
 	end,
+	ZeroPrime = function()
+		skyobj.SkyboxBk = 'rbxassetid://14330565986'
+		skyobj.SkyboxDn = 'rbxassetid://14330586340'
+		skyobj.SkyboxFt = 'rbxassetid://14330572603'
+		skyobj.SkyboxLf = 'rbxassetid://14330578858'
+		skyobj.SkyboxRt = 'rbxassetid://14330569172'
+		skyobj.SkyboxUp = 'rbxassetid://14330582541'
+	end,
 	PitchDark = function()
 		skyobj.StarCount = 0
 		oldtime = lightingService.TimeOfDay
@@ -15040,3 +15048,29 @@ runFunction(function()
 		HoverText = 'Hold down space to jump'
 	})
 end)
+
+runFunction(function()
+	local InfernalKill = {Enabled = false}
+  InfernalKill = GuiLibrary["ObjectsThatCanBeSaved"]["NewVapeWindow"]["Api"].CreateOptionsButton({
+	  ["Name"] = "4BigGuysExploit",
+	  ["Function"] = function(callback)
+		  if callback then
+			  repeat
+			  wait(0.001)
+			  function getNil(name,class) for _,v in next, getnilinstances() do if v.ClassName==class and v.Name==name then return v;end end end
+			  local args = {
+				  [1] = {
+					  ["chargeTime"] = 0.9,
+					  ["player"] = game:GetService("Players").LocalPlayer,
+					  ["weapon"] = getNil("infernal_saber", "Accessory")
+				  }
+			  }
+  
+			  game:GetService("ReplicatedStorage"):WaitForChild("rbxts_include"):WaitForChild("node_modules"):WaitForChild("@rbxts"):WaitForChild("net"):WaitForChild("out"):WaitForChild("_NetManaged"):WaitForChild("HellBladeRelease"):FireServer(unpack(args))
+		  until not InfernalKill["Enabled"]
+	  end
+		  end,
+		  ["HoverText"] = "Found By The Vape Private Team | Recreated By Skids"
+	  })
+  end)
+
