@@ -27,7 +27,7 @@
 		HealthbarMods - blxnk
 
 		InfiniteJump - luckii
-		Ember Instakill - 0prime/luckii
+		Ember Instakill - luckii
 		
 ]===]
 
