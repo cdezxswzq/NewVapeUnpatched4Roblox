@@ -9743,7 +9743,7 @@ runFunction(function()
 								until (not AutoKit.Enabled)
 							end)
 						end
-					end)
+					end
 				end)
 			else
 				if oldfish then
