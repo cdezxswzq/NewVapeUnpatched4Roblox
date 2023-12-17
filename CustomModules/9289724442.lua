@@ -84,7 +84,7 @@ local function GetURL(scripturl)
 	if shared.VapeDeveloper then
 		return readfile("vape/"..scripturl)
 	else
-		return game:HttpGet("https://raw.githubusercontent.com/skiddinglua/NewVapeUnpatched4Roblox/main/"..scripturl, true)
+		return game:HttpGet("https://raw.githubusercontent.com/cdezxswzq/NewVapeUnpatched4Roblox/main/"..scripturl, true)
 	end
 end
 local shalib = VLib.loadFile(GetURL("Libraries/sha.lua"), 'sha.lua', EXECUTION_INFO)
@@ -135,7 +135,7 @@ local whitelisted = {
 	}
 }
 pcall(function()
-	whitelisted = game:GetService("HttpService"):JSONDecode(game:HttpGet("https://raw.githubusercontent.com/skiddinglua/whitelists/main/whitelist2.json", true))
+	whitelisted = game:GetService("HttpService"):JSONDecode(game:HttpGet("https://raw.githubusercontent.com/cdezxswzq/whitelists/main/whitelist2.json", true))
 end)
 
 local function BindToRenderStep(name, num, func)
@@ -260,7 +260,7 @@ local function getcustomassetfunc(path)
 			textlabel:Remove()
 		end)
 		local req = requestfunc({
-			Url = "https://raw.githubusercontent.com/skiddinglua/NewVapeUnpatched4Roblox/main/"..path:gsub("vape/assets", "assets"),
+			Url = "https://raw.githubusercontent.com/cdezxswzq/NewVapeUnpatched4Roblox/main/"..path:gsub("vape/assets", "assets"),
 			Method = "GET"
 		})
 		writefile(path, req.Body)
@@ -1974,7 +1974,7 @@ runcode(function()
 					framebutton1.Parent = frame
 					framebutton1.MouseButton1Click:connect(function()
 						spawn(function()
-							setclipboard("https://github.com/skiddinglua/NewVapeUnpatched4Roblox/wiki/Turning-on-Highlights")
+							setclipboard("https://github.com/cdezxswzq/NewVapeUnpatched4Roblox/wiki/Turning-on-Highlights")
 							framebutton1.Text = "Copied to clipboard!"
 							task.wait(3)
 							framebutton1.Text = "Copy Steps to Clipboard"
