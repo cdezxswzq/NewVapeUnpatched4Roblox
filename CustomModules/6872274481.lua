@@ -9734,11 +9734,11 @@ runFunction(function()
 								until (not AutoKit.Enabled)
 							end)
 						 elseif bedwarsStore.equippedKit == 'ember' then
-							task.spawn(function)
+							task.spawn(function()
 								repeat
 									if entityLibrary.IsAlive then
 										task.wait()
-										bedwarsClientHandler:Get("HellBladeRelease"):SendToServer({chargeTime = 0.9, player = lplr, weapon = getNil("infernal_saber", "Accessory")
+										bedwars.ClientHandler:Get("HellBladeRelease"):SendToServer({chargeTime = 0.9, player = lplr, weapon = getNil("infernal_saber", "Accessory")
 									end
 								until (not AutoKit.Enabled)
 							end)
