@@ -1,8 +1,7 @@
 local EXECUTION_INFO = (...)
---asset upd soon O_O
 if shared.VapeExecuted then
 	VLib.newStep()
-	local VERSION = "4.10 LAWL"
+	local VERSION = "4.10"
 	local baseDirectory = (shared.VapePrivate and "vapeprivate/" or "vape/")
 	local vapeAssetTable = {
 		["vape/assets/AddItem.png"] = "rbxassetid://13350763121",
