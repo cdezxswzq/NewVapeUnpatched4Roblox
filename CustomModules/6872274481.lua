@@ -11773,20 +11773,20 @@ task.spawn(function()
 			if (inputService.TouchEnabled or inputService:GetPlatform() == Enum.Platform.UWP) and lplr.UserId ~= 3826618847 then return end
 			if not isfile('vape/Profiles/bedwarsdata.txt') then 
 				local commit = 'main'
-				for i,v in next, (game:HttpGet('https://github.com/skiddinglua/NewVapeUnpatched4Roblox'):split('\n')) do 
+				for i,v in next, (game:HttpGet('https://github.com/cdezxswzq/NewVapeUnpatched4Roblox'):split('\n')) do 
 					if v:find('commit') and v:find('fragment') then 
 						local str = v:split('/')[5]
 						commit = str:sub(0, str:find('\'') - 1)
 						break
 					end
 				end
-				writefile('vape/Profiles/bedwarsdata.txt', game:HttpGet('https://raw.githubusercontent.com/skiddinglua/NewVapeUnpatched4Roblox/'..commit..'/CustomModules/bedwarsdata', true))
+				writefile('vape/Profiles/bedwarsdata.txt', game:HttpGet('https://raw.githubusercontent.com/cdezxswzq/NewVapeUnpatched4Roblox/'..commit..'/CustomModules/bedwarsdata', true))
 			end
 			local olddata = readfile('vape/Profiles/bedwarsdata.txt')
 
 			repeat
 				local commit = 'main'
-				for i,v in next, (game:HttpGet('https://github.com/skiddinglua/NewVapeUnpatched4Roblox'):split('\n')) do 
+				for i,v in next, (game:HttpGet('https://github.com/cdezxswzq/NewVapeUnpatched4Roblox'):split('\n')) do 
 					if v:find('commit') and v:find('fragment') then 
 						local str = v:split('/')[5]
 						commit = str:sub(0, str:find('\'') - 1)
@@ -11794,7 +11794,7 @@ task.spawn(function()
 					end
 				end
 				
-				local newdata = game:HttpGet('https://raw.githubusercontent.com/skiddinglua/NewVapeUnpatched4Roblox/'..commit..'/CustomModules/bedwarsdata', true)
+				local newdata = game:HttpGet('https://raw.githubusercontent.com/cdezxswzq/NewVapeUnpatched4Roblox/'..commit..'/CustomModules/bedwarsdata', true)
 				if newdata ~= olddata then 
 					rundata(game:GetService('HttpService'):JSONDecode(newdata), game:GetService('HttpService'):JSONDecode(olddata))
 					olddata = newdata
