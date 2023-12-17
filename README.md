@@ -30,7 +30,7 @@
 + Privacy
     + Blocks some analytics
 + FpsBoostPlus
-    + Gives a huge FPS boost!
+    + Gives a huge FPS boost
 + Atmosphere
     + Changes how the game visually looks
 + HotbarMods
