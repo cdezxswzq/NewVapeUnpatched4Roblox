@@ -1,8 +1,8 @@
 local EXECUTION_INFO = (...)
--- broken
+local teleportService = game:GetService("TeleportService")
 VLib.newStep()
 repeat task.wait() until game:IsLoaded()
-local data = game:GetService("TeleportService"):GetLocalPlayerTeleportData()
+local data = teleportService:GetLocalPlayerTeleportData()
 if type(data) == "table" and data.party and game.PlaceId ~= 6872265039 then 
     getgenv().isBedwars = true
 end
