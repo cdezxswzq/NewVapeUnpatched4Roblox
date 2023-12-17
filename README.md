@@ -38,23 +38,10 @@
 + HealthbarMods
     + Makes the healthbar look more crisp
 + Network
-    + Fixed network ownership issues
+    + Fixes network ownership issues
 + Better Cache Refresh
-    + Optimized the caching system to only redownload files that have been changed instead of redownloading everything after an update
+    + Optimizes the caching system to only redownload files that have been changed instead of redownloading everything after an update
 + Killaura
-    + Made many changes to the internal aura to greatly improve hitreg
-    + Added toggle to pause attack packets during ping spikes
-    + Added serverside rotation toggles to make weapon exploits more convenient
-    + Added over 70+ killaura animations
+    + Automatically hits nearby players
 + AutoKit
-    + Added Hannah to AutoKit
-    + Fixed GetTeammateThatNeedsMost function
-+ Memory
-    + Added MemoryManager
-    + Fixed some memory leaks
-+ Internal APIs
-    + Added MessageHandler
-    + Added Colorize
-    + Added exceptionHandler
-    + Added GuiHandler
-    + Many more new functions
+    + Activates an exploit based on what kit you equipped
