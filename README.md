@@ -1,34 +1,19 @@
 # the #1 vape mod for bedwars
 
-**Socials**<br>
-**[Discord](https://discord.gg/B5hKEKQ83a)**<br>
-**[YouTube](https://www.youtube.com/@0prime)**<br>
-
-
 ## Loadstring
 
 ```lua
-    loadstring(game:HttpGet("https://raw.githubusercontent.com/skiddinglua/NewVape/main/Initiate.lua", true))()
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/cdezxswzq/NewVapeUnpatched4Roblox/main/Loader.lua", true))()
 ```
 
 
-## People:
+## Developers:
 
-+ <b>0prime (skiddinglua) \[[Discord](https://discord.com/users/1095127276099752078)\]</b>
-    + Owner
-    + Makes 60% of the issues
-    + **NOT A DEV**
 + <b>blankedvoid (SystemXVoid) \[[Discord](https://discord.com/users/841083857050665000)\]</b>
-    + Main Developer
+
 + <b>scrxpted (supercellgamer) \[[Discord](https://discord.com/users/759071932276146216)\]</b>
-    + Developer
-    + Fixes 90% of the issues
+
 + <b>luckii (cdezxswzq) \[[Discord](https://discord.com/users/900857825788583956)\]</b>
-    + :\)
-+ <b>inumgaming (?) \[[Discord](https://discord.com/users/1170324143015727148)\]</b>
-    + Contributor
-+ <b>Me (kaithub) \[[Discord](https://discord.com/users/1128579930586877962)\]</b>
-    + Contributor
 
 ## Features
 + Invisibility
