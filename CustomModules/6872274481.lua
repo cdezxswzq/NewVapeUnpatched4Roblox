@@ -12841,11 +12841,11 @@ runFunction(function()
 	local AnticheatBypassShowRoot = {Enabled = false}
 
 	local BypassNumbers = {
-		Lerp = 0.3,
-		Frequency = 0.33,
+		Lerp = 0.4,
+		Frequency = 0.43,
 		TPLowest = 0.05,
-		TPPrecise = 20,
-		TPRecheck = 20,
+		TPPrecise = 23,
+		TPRecheck = 23,
 		SlowdownDistance = 300,
 		Slowdown = 0.7,
 	}
