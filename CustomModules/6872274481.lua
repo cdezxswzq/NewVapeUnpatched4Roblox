@@ -25,6 +25,7 @@
 		HotbarMods - blxnk
 		AntiNoclip - blxnk
 		HealthbarMods - blxnk
+		ElkDisabler - blxnk
 
 		InfiniteJump - luckii
 		Ember Instakill - luckii
@@ -15066,4 +15067,40 @@ runFunction(function()
 		Function = function() end,
 		HoverText = 'Hold down space to jump'
 	})
+end)
+
+runFunction(function() 
+local ElkSemiDisabler = {}
+local oldhip
+ElkSemiDisabler = GuiLibrary.ObjectsThatCanBeSaved.NewVapeWindow.Api.CreateOptionsButton({
+	Name = 'ElkDisabler',
+	HoverText = 'Allows up to 36 speed alone',
+	Function = function(calling)
+		if calling then 
+			if not isAlive() then
+				repeat task.wait() until isAlive() or not AntiCheatBypass.Enabled  
+			end
+			if not ElkSemiDisabler.Enabled then
+				return 
+			end
+			for i,v in next, bedwars.SoundList do 
+				if i:lower():find('elk') then 
+					bedwars.SoundList[i] = '' 
+				end 
+			end
+			oldhip = lplr.Character.Humanoid.HipHeight
+			repeat 
+				pcall(function() lplr.Character.elk:FindFirstChild('body_mesh'):Destroy() end)
+				pcall(function() lplr.Character.elk.PrimaryPart:Destroy() end) 
+				pcall(function() lplr.Character.Humanoid.HipHeight = oldhip end)
+				if isAlive() and bedwars.AbilityController:canUseAbility('elk_summon') and lplr.Character:FindFirstChild('elk') == nil then 
+					bedwars.AbilityController:useAbility('elk_summon')
+					lplr.Character.Humanoid.HipHeight = oldhip
+					WarningNotification('ElkDisabler', 'Partially disabled anticheat', 5)
+				end
+				task.wait()
+			until not ElkSemiDisabler.Enabled
+		end
+	end
+}) 
 end)
