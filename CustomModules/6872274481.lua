@@ -15085,7 +15085,7 @@ ElkSemiDisabler = GuiLibrary.ObjectsThatCanBeSaved.UtilityWindow.Api.CreateOptio
 					bedwars.SoundList[i] = '' 
 				end 
 			end
-			oldhip = lplr.Character.Humanoid.HipHeight
+			oldhip = lplr.Character.Humanoid.HipHeight or 2
 			repeat 
 				pcall(function() lplr.Character.elk:FindFirstChild('body_mesh'):Destroy() end)
 				pcall(function() lplr.Character.elk.PrimaryPart:Destroy() end) 
