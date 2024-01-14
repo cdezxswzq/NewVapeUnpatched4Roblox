@@ -12366,7 +12366,7 @@ runFunction(function()
 	local chatApp
 	local oldChatPosition
 
-	ChatMover = GuiLibrary.ObjectsThatCanBeSaved.NewVapeWindow.Api.CreateOptionsButton({
+	ChatMover = GuiLibrary.ObjectsThatCanBeSaved.RenderWindow.Api.CreateOptionsButton({
 		Name = 'ChatMover',
 		Function = function(callback)
 			if callback then
@@ -12466,7 +12466,7 @@ runFunction(function()
 			setCollisions(lplr.Character, true)
 		end
 	end
-	Invis = GuiLibrary.ObjectsThatCanBeSaved.NewVapeWindow.Api.CreateOptionsButton({
+	Invis = GuiLibrary.ObjectsThatCanBeSaved.UtilityWindow.Api.CreateOptionsButton({
 		Name = 'Invis',
 		Function = function(callback)
 			if callback then
@@ -12787,7 +12787,7 @@ runFunction(function()
 		end
 	}
 
-	Teleport = GuiLibrary.ObjectsThatCanBeSaved.NewVapeWindow.Api.CreateOptionsButton({
+	Teleport = GuiLibrary.ObjectsThatCanBeSaved.UtilityWindow.Api.CreateOptionsButton({
 		Name = 'Teleport',
 		Function = function(callback)
 			if callback then
@@ -12970,7 +12970,7 @@ runFunction(function()
 	end
 
 	local pausedvelo = false
-	AnticheatBypass = GuiLibrary.ObjectsThatCanBeSaved.NewVapeWindow.Api.CreateOptionsButton({
+	AnticheatBypass = GuiLibrary.ObjectsThatCanBeSaved.UtilityWindow.Api.CreateOptionsButton({
 		Name = 'AnticheatAbuse',
 		HoverText = 'gives the anticheat ptsd so you don\'t get lagbacked',
 		Function = function(callback)
@@ -13416,7 +13416,7 @@ runFunction(function()
 		ResetRemote:SendToServer()
 	end)
 
-	KeepInventory = GuiLibrary.ObjectsThatCanBeSaved.NewVapeWindow.Api.CreateOptionsButton({
+	KeepInventory = GuiLibrary.ObjectsThatCanBeSaved.UtilityWindow.Api.CreateOptionsButton({
 		Name = 'KeepInventory',
 		Function = function(callback)
 			if callback then
@@ -13484,7 +13484,7 @@ runFunction(function()
 	local oldCreatePing
 	local oldCooldown
 
-	NoPing = GuiLibrary.ObjectsThatCanBeSaved.NewVapeWindow.Api.CreateOptionsButton({
+	NoPing = GuiLibrary.ObjectsThatCanBeSaved.RenderWindow.Api.CreateOptionsButton({
 		Name = 'NoPing',
 		Function = function(callback)
 			if callback then
@@ -13520,7 +13520,7 @@ runFunction(function()
 	local newMetatable
 	local oldFireServer2
 
-	Privacy = GuiLibrary.ObjectsThatCanBeSaved.NewVapeWindow.Api.CreateOptionsButton({
+	Privacy = GuiLibrary.ObjectsThatCanBeSaved.UtilityWindow.Api.CreateOptionsButton({
 		Name = 'Privacy',
 		Function = function(callback)
 			if callback then
@@ -13638,7 +13638,7 @@ runFunction(function()
 		end
 	end
 
-	FPSBoostPlus = GuiLibrary.ObjectsThatCanBeSaved.NewVapeWindow.Api.CreateOptionsButton({
+	FPSBoostPlus = GuiLibrary.ObjectsThatCanBeSaved.RenderWindow.Api.CreateOptionsButton({
 		Name = 'FPSBoostPlus',
 		Function = function(callback)
 			task.spawn(function()
@@ -14418,7 +14418,7 @@ runFunction(function()
 	end
 }
 
-Atmosphere = GuiLibrary.ObjectsThatCanBeSaved.NewVapeWindow.Api.CreateOptionsButton({
+Atmosphere = GuiLibrary.ObjectsThatCanBeSaved.RenderWindow.Api.CreateOptionsButton({
 		Name = 'Atmosphere',
 		ExtraText = function()
 			return AtmosphereMethod.Value ~= 'Custom' and AtmosphereMethod.Value or ''
@@ -14569,10 +14569,9 @@ Atmosphere = GuiLibrary.ObjectsThatCanBeSaved.NewVapeWindow.Api.CreateOptionsBut
 	table.insert(skythemeobjects, SkyMoon)
 end)
 
---extremely useful module!!
 runFunction(function()
 	local AntiNoclip = {Enabled = false}
-	AntiNoclip = GuiLibrary.ObjectsThatCanBeSaved.NewVapeWindow.Api.CreateOptionsButton({
+	AntiNoclip = GuiLibrary.ObjectsThatCanBeSaved.UtilityWindow.Api.CreateOptionsButton({
 		Name = 'AntiNoclip',
 		HoverText = 'Prevents you from noclipping into the ground when landing from\nInfiniteFly etc. (Prevents being lagbacked using infinitefly)',
 		Function = function(callback)
@@ -14647,7 +14646,7 @@ runFunction(function()
 			end 
 		end
 	end
-	HotbarMods = GuiLibrary.ObjectsThatCanBeSaved.NewVapeWindow.Api.CreateOptionsButton({
+	HotbarMods = GuiLibrary.ObjectsThatCanBeSaved.RenderWindow.Api.CreateOptionsButton({
 		Name = 'HotbarMods',
 		HoverText = 'Add customization to your hotbar.',
 		Function = function(callback)
@@ -14831,7 +14830,7 @@ runFunction(function()
 			end
 		end
 	end
-	HealthbarMods = GuiLibrary.ObjectsThatCanBeSaved.NewVapeWindow.Api.CreateOptionsButton({
+	HealthbarMods = GuiLibrary.ObjectsThatCanBeSaved.RenderWindow.Api.CreateOptionsButton({
 		Name = 'HealthbarMods',
 		HoverText = 'Customize the color of your healthbar.\nAdd \'<health>\' to your custom text dropdown (if custom text enabled)to insert your health.',
 		Function = function(callback)
@@ -15013,7 +15012,7 @@ end)
 		table.insert(NameHider.Connections, parent.DescendantAdded:Connect(fixInstance))
 	end
 
-	NameHider = GuiLibrary.ObjectsThatCanBeSaved.NewVapeWindow.Api.CreateOptionsButton({
+	NameHider = GuiLibrary.ObjectsThatCanBeSaved.Window.Api.CreateOptionsButton({
 		Name = 'NameHider',
 		Function = function(callback)
 			if callback then
@@ -15031,7 +15030,7 @@ runFunction(function()
 	local InfiniteJump = {Enabled = false}
 	local InfiniteJumpHold = {Enabled = false}
 
-	InfiniteJump = GuiLibrary.ObjectsThatCanBeSaved.NewVapeWindow.Api.CreateOptionsButton({
+	InfiniteJump = GuiLibrary.ObjectsThatCanBeSaved.UtilityWindow.Api.CreateOptionsButton({
 		Name = 'InfiniteJump',
 		HoverText = 'Jump without touching the ground',
 		Function = function(callback)
@@ -15070,7 +15069,7 @@ end)
 runFunction(function() 
 local ElkSemiDisabler = {}
 local oldhip
-ElkSemiDisabler = GuiLibrary.ObjectsThatCanBeSaved.NewVapeWindow.Api.CreateOptionsButton({
+ElkSemiDisabler = GuiLibrary.ObjectsThatCanBeSaved.UtilityWindow.Api.CreateOptionsButton({
 	Name = 'ElkDisabler',
 	HoverText = 'Allows up to 36 speed alone',
 	Function = function(calling)
@@ -15100,5 +15099,5 @@ ElkSemiDisabler = GuiLibrary.ObjectsThatCanBeSaved.NewVapeWindow.Api.CreateOptio
 			until not ElkSemiDisabler.Enabled
 		end
 	end
-}) 
+	}) 
 end)
