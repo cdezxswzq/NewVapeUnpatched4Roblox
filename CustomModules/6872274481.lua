@@ -15070,34 +15070,34 @@ runFunction(function()
 	local ElkSemiDisabler = {Enabled = false}
 	local oldhip
 	ElkSemiDisabler = GuiLibrary.ObjectsThatCanBeSaved.UtilityWindow.Api.CreateOptionsButton({
-	Name = 'ElkDisabler',
-	HoverText = 'Allows up to 36 speed alone',
-	Function = function(callback)
-		if callback then 
-			if not isAlive() then
-				repeat task.wait() until isAlive() or not ElkSemiDisabler.Enabled  
-			end
-			if not ElkSemiDisabler.Enabled then
-				return 
-			end
-			for i,v in next, bedwars.SoundList do 
-				if i:lower():find('elk') then 
-					bedwars.SoundList[i] = '' 
-				end 
-			end
-			oldhip = lplr.Character.Humanoid.HipHeight or 2
-			repeat 
-				pcall(function() lplr.Character.elk:FindFirstChild('body_mesh'):Destroy() end)
-				pcall(function() lplr.Character.elk.PrimaryPart:Destroy() end) 
-				pcall(function() lplr.Character.Humanoid.HipHeight = oldhip end)
-				if isAlive() and bedwars.AbilityController:canUseAbility('elk_summon') and lplr.Character:FindFirstChild('elk') == nil then 
-					bedwars.AbilityController:useAbility('elk_summon')
-					lplr.Character.Humanoid.HipHeight = oldhip
-					warningNotification('ElkDisabler', 'Partially disabled anticheat', 5)
+		Name = 'ElkDisabler',
+		HoverText = 'Allows up to 36 speed alone',
+		Function = function(callback)
+			if callback then 
+				if not isAlive() then
+					repeat task.wait() until isAlive() or not ElkSemiDisabler.Enabled  
 				end
-				task.wait()
-			until not ElkSemiDisabler.Enabled
+				if not ElkSemiDisabler.Enabled then
+					return 
+				end
+				for i,v in next, bedwars.SoundList do 
+					if i:lower():find('elk') then 
+						bedwars.SoundList[i] = '' 
+					end 
+				end
+				oldhip = lplr.Character.Humanoid.HipHeight or 2
+				repeat 
+					pcall(function() lplr.Character.elk:FindFirstChild('body_mesh'):Destroy() end)
+					pcall(function() lplr.Character.elk.PrimaryPart:Destroy() end) 
+					pcall(function() lplr.Character.Humanoid.HipHeight = oldhip end)
+					if isAlive() and bedwars.AbilityController:canUseAbility('elk_summon') and lplr.Character:FindFirstChild('elk') == nil then 
+						bedwars.AbilityController:useAbility('elk_summon')
+						lplr.Character.Humanoid.HipHeight = oldhip
+						warningNotification('ElkDisabler', 'Partially disabled anticheat', 5)
+					end
+					task.wait()
+				until not ElkSemiDisabler.Enabled
+			end
 		end
-	end
 	}) 
 end)
