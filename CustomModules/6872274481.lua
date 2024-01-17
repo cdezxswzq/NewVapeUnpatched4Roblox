@@ -15062,7 +15062,7 @@ runFunction(function()
 	InfiniteJumpHold = InfiniteJump.CreateToggle({
 		Name = 'Hold',
 		Function = function() end,
-		HoverText = 'Hold down space to jump'https://github.com/cdezxswzq/NewVapeUnpatched4Roblox/blob/main/CustomModules/6872274481.lua
+		HoverText = 'Hold down space to jump'
 	})
 end)
 
