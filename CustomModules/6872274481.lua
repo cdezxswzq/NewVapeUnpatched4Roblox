@@ -15062,7 +15062,7 @@ runFunction(function()
 	InfiniteJumpHold = InfiniteJump.CreateToggle({
 		Name = 'Hold',
 		Function = function() end,
-		HoverText = 'Hold down space to jump'
+		HoverText = 'Hold down space to jump'https://github.com/cdezxswzq/NewVapeUnpatched4Roblox/blob/main/CustomModules/6872274481.lua
 	})
 end)
 
@@ -15079,7 +15079,7 @@ runFunction(function()
 				end
 				for i,v in next, bedwars.SoundList do 
 					if i:lower():find('elk') then 
-						bedwars.SoundList[i] = '' 
+						bedwars.SoundList[i] = ''
 					end 
 				end
 				oldhip = lplr.Character.Humanoid.HipHeight or 2
