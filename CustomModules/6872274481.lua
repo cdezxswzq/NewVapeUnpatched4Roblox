@@ -15077,9 +15077,6 @@ runFunction(function()
 				if not isAlive() then
 					repeat task.wait() until isAlive() or not ElkSemiDisabler.Enabled  
 				end
-				if not ElkSemiDisabler.Enabled then
-					return 
-				end
 				for i,v in next, bedwars.SoundList do 
 					if i:lower():find('elk') then 
 						bedwars.SoundList[i] = '' 
