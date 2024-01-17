@@ -15067,9 +15067,9 @@ runFunction(function()
 end)
 
 runFunction(function() 
-local ElkSemiDisabler = {Enabled = false}
-local oldhip
-ElkSemiDisabler = GuiLibrary.ObjectsThatCanBeSaved.UtilityWindow.Api.CreateOptionsButton({
+	local ElkSemiDisabler = {Enabled = false}
+	local oldhip
+	ElkSemiDisabler = GuiLibrary.ObjectsThatCanBeSaved.UtilityWindow.Api.CreateOptionsButton({
 	Name = 'ElkDisabler',
 	HoverText = 'Allows up to 36 speed alone',
 	Function = function(callback)
